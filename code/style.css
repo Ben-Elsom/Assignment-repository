@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    }
+body {
+    margin: 0;
+    padding: 1rem;
+    } 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer {
+    background-color: black; 
+    width: 100%;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+    align-items: center;
+}

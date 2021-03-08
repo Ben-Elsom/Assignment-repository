@@ -8,7 +8,7 @@ body {
     } 
 nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     
@@ -37,8 +37,9 @@ nav div {
     text-decoration: none;
     display: flex;
     justify-content: center;
+    width: 20%;
 }
-nav div:visited {
+nav div a:visited {
     text-decoration: none;
 }
 h1 {
@@ -48,3 +49,4 @@ h1 {
 .grid-container {
     display: grid;
 }
+

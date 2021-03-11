@@ -94,6 +94,20 @@ main {
     text-align: center;
 }
 
+ @keyframes moving-box {
+    /* 10% {background-color: blue;}
+    100% {background-color: green;} */
+    15% {transform: scale(3);}
+    25% {transform: rotate(360deg);}
+    35% {transform: rotate(0deg);}
+    45% {transform: rotate(360deg);}
+    55% {transform: rotate(0deg); }
+    65% {background-color: red;}
+    75% {background-color: green;}
+    85% {background-color: blue;}
+    100% {background-color: black;}
+
+ }
 .box {
     height: 100px;
     width: 100px; 
@@ -101,31 +115,24 @@ main {
     border-radius: 15%;
     display: flex;
     justify-content: center;  
-    animation: moving-box 5s;
+    
 }
-
-@keyframe moving-box {
-    25% {transform: scale(3);}
-    35% {transform: rotate(360deg)}
-    45% {transform: rotate(360deg)}
-    55% {transform: rotate(360deg)}
-    65% {background-color: red}
-    75% {background-color: green}
-    85% {background-color: blue}
-    100% {background-color: black; scale(1)}
+.box:hover {
+    animation: moving-box 8s;
 }
-
 .box-container
 {
     display: flex;
     justify-content: center;
     padding-top: 150px;
+    padding-bottom: 150px;
 }
-.profile img {
-    width: 50vh;
-    border-radius: 50%;
+.hero-image {
+    height: 200px;
+    width: 100px;
+    background-image: url("images/profile-image.jpg");
+}
     
-}
 .profile {
     display: flex;
     flex-direction: column;
@@ -146,16 +153,28 @@ main {
    
 }
 .back-to-top a {
-    positon: fixed;
+    position: fixed;
     /* bottom: 30px; */
     
 }
 .active {
     background-color: rgb(196, 60, 196);
 }
-.back-to-top {
-    /* position: fixed; */
+
+.language-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+.language-icons img {
+    padding: 50px;
+    width: 200px;
+}
+
+h3 {
+    padding-top: 1em;
+}
+
 
 @media only screen and (min-width: 600px) {
     nav {

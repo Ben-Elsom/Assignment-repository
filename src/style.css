@@ -95,12 +95,31 @@ main {
 }
 
 .box {
-    height: 2rem;
-    width: 2rem; 
+    height: 100px;
+    width: 100px; 
     background-color: black;
     border-radius: 15%;
-    
-   
+    display: flex;
+    justify-content: center;  
+    animation: moving-box 5s;
+}
+
+@keyframe moving-box {
+    25% {transform: scale(3);}
+    35% {transform: rotate(360deg)}
+    45% {transform: rotate(360deg)}
+    55% {transform: rotate(360deg)}
+    65% {background-color: red}
+    75% {background-color: green}
+    85% {background-color: blue}
+    100% {background-color: black; scale(1)}
+}
+
+.box-container
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
 }
 .profile img {
     width: 50vh;
@@ -123,6 +142,13 @@ main {
     display: flex;
     justify-content: center;
     font-size: 2rem;
+    padding-top: 50px;
+   
+}
+.back-to-top a {
+    positon: fixed;
+    /* bottom: 30px; */
+    
 }
 .active {
     background-color: rgb(196, 60, 196);

@@ -7,6 +7,7 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     } 
 nav {
     display: flex;
@@ -40,7 +41,7 @@ h3 {
 }
 p {
     font-family: 'RocknRoll One', sans-serif;
-    padding: 10px;
+
 }
 footer {
     background-color: black; 
@@ -48,9 +49,9 @@ footer {
     color: white; 
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
-    height: 2rem;
+    height: 30px;
     align-items: center;
 }
 
@@ -66,30 +67,49 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding-left: 2%;
+    padding-right: 2%;
+
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     grid-template-rows: auto ;
     grid-row-gap: 50px;
+    grid-column-gap: 25px;
+    width: 100%;
+    
 }
 
 .grid-item {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 2em;
+    display: flex;
+    justify-content: space-between;
   
 }
 .grid-item p {
     font-size: 1rem;
     text-align: center;
+    
+
 }
 .grid-item img{
-    width: 300px;
-    height: auto;
+    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    
+}
+#nap {
+    object-position: 50% 90%;
+}
+#confused {
+    object-position: 50% 35%;
 }
 .grid-item h4 {
     text-align: center;
@@ -132,7 +152,7 @@ main {
 .box:hover {
     animation-name: grow, shrink, spin, color-change;
     animation-duration: 1s, 1s, 3s, 2s;
-    animation-delay: 0s, 1s, 2s, 5s, 7s;
+    animation-delay: 0s, 1s, 1.3s, 5s, 5s;
 }
 .box-container
 {
@@ -140,6 +160,7 @@ main {
     justify-content: center;
     padding-top: 150px;
     padding-bottom: 150px;
+    /* width: 100%; */
 }
     
 .profile {
@@ -151,12 +172,11 @@ main {
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    padding-top: 50px;
-   
+    padding-top: 50px;   
 }
 .back-to-top a {
-    position: fixed;
-    /* bottom: 30px; */
+    position: relative;
+    bottom: 0px;
     
 }
 .active {
@@ -167,12 +187,15 @@ main {
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    /* height: 100px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 .language-icons img {
     width: 100px;
-    /* padding: 50px; */
+    /* padding-right: 50px; */
 }
 
 .intro {
@@ -183,11 +206,14 @@ main {
     width: 25%;
 }
 .intro p {
-    width: 25%;
+    width: 50%;
 }
 .social-media img {
-    width: 150px;
     height: 150px;
+}
+.social-grid {
+    display: grid;
+    grid-template-columns: 2fr;
 }
 
 #portfolio-image {
@@ -200,11 +226,20 @@ main {
         flex-direction: row;
         /* width: 20%; */
     }
+    nav a {
+        height: 40px;
+    }
+    .grid-container {
+        display: grid;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
+    }
+    .grid-container img {
+        width: 400px;
     }
     #profile-pic {
         width: 60%;
@@ -216,6 +251,10 @@ main {
     }
     main div p {
         width: 60%
+    }
+
+    nav a {
+        height: 50px;
     }
 
 

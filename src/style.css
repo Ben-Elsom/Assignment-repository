@@ -183,7 +183,9 @@ main {
 .back-to-top a {
     position: relative;
     bottom: 0px;
-    
+}
+#index-back-to-top a {
+    bottom: 30px;
 }
 .active {
     background-color: rgb(196, 60, 196);

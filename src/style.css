@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+/* these are the fonts I have imported */
 * {
     box-sizing: border-box;
     margin: 0
     }
+    /* this border-box element means that the total width of my element will not grow when I add padding and margin. and we are setting the default margin to be 0 */
 body {
-    margin: 0;
     padding: 0;
     } 
+    /* setting the default padding to xero */
+
 #contact-body {
     height: 100vh;
 }
@@ -16,6 +19,7 @@ nav {
     flex-direction: column;
     justify-content: center;
 }
+/* this is to center thee navigation labels in the center of their container */
 nav a {
     background-color: rgb(0, 159, 252);
     border: 1px solid black;
@@ -25,26 +29,26 @@ nav a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 2rem;
+    height: 30px;
     font-size: 1.5em;
     text-decoration: none;
     color: black;
 }
+/* this is the styling of my nav bar */
+
 nav a:hover {
     background-color: rgb(196, 60, 196);
 }
+/* this the change the color of the section of nav you are hovering over */
 h3 {
     padding-top: 1em;
 }
+/* this is to have some space above each of my h3 headings */
 
-#ben-elsom {
-    background-color: black;
-    color: white;
-}
 p {
     font-family: 'RocknRoll One', sans-serif;
-
 }
+/* this is where I set the font family of my p tags */
 footer {
     background-color: black; 
     width: 100%;
@@ -56,19 +60,27 @@ footer {
     height: 30px;
     align-items: center;
 }
+/* this is the styling of my footer, I am centering on both axis', coloring it and giving it it's correct position*/
 
 #contact-footer {
     position: fixed;
 }
+/* This is to fix the footer on my contact page as the page is too short for my regular css */
 
-h1 {
+header {
     display: flex;
     justify-content: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
 }
+/* this is the styling for my header */
 h2 {
     font-family: 'Redressed', cursive;
     font-size: 3rem;
 }
+/* this is the font and size for my h2 headings  */
 main {
     display: flex;
     flex-direction: column;
@@ -77,6 +89,7 @@ main {
     padding-right: 2%;
     height: 100%;
 }
+/* this is the styling for my main section where i center things, make it take up all the space it can and gives it some padding */
 
 .grid-container {
     display: grid;
@@ -85,41 +98,44 @@ main {
     grid-row-gap: 50px;
     grid-column-gap: 25px;
     width: 100%;
-    
 }
+/* this is the styling for my grids on my interests and blog pages. I set the row and column gap, number of rows and and size of each section  */
 
 .grid-item {
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 2em;
     display: flex;
     justify-content: space-between;
-  
 }
+/* this is the styling for the items in my grid on my interests ang blog pages */
 .grid-item p {
     font-size: 1rem;
     text-align: center;
-    
-
 }
+/* just aligning my text and setting the font size for the text in my blog posts */
+
 .grid-item img{
     height: 300px;
-    width: 100%;
+    width: 400px;
     max-width: 600px;
     object-fit: cover;
-    
 }
+/* setting the height and width of my images in my grid and making sure that my different sized images fit into the same dimensions without distorting */
 #nap {
     object-position: 50% 70%;
 }
+/* this is lining the image up how I want inside its set width and height */
 #confused {
     object-position: 50% 35%;
 }
+/* this is lining the image up how I want inside its set width and height */
+
 .grid-item h4 {
     text-align: center;
 }
+/* This is aligning the titles of the photos on my interests page */
 
  @keyframes color-change {
     25% {background-color: red;}
@@ -127,39 +143,39 @@ main {
     75% {background-color: blue;}
     100% {background-color: black;}
  }
+ /* This is one of the animations on my boxs that makes it change colors */
  @keyframes grow {
      0% {transform: scale(1);}
-     100% {transform: scale(3);}
+     100% {transform: scale(3.5);}
  }
+ /* This is one of the animations on my boxs that makes it grow */
 
  @keyframes shrink {
-     0% {transform: scale(3);}
+     0% {transform: scale(3.5);}
      100% {transform: scale(1);}
  }
+ /* This is one of the animations on my boxs that makes it */
  @keyframes spin {
-     /* 0% {transform: scale(3); transform: rotate(0deg);} */
      25% {transform: rotate(360deg);}
      50% {transform: rotate(0deg);}
      75% {transform: rotate(360deg);}
      100% {transform:rotate(0deg);}
- 
  }
+ /* This is one of the animations on my boxs that makes it spin */
 
 .box {
     height: 100px;
     width: 100px; 
     background-color: black;
     border-radius: 15%;
-    display: flex;
-    justify-content: center; 
-    transform: scale(1); 
-    
 }
+/* this the the size, color and shape */
 .box:hover {
     animation-name: grow, shrink, spin, color-change;
     animation-duration: 1s, 1s, 3s, 2s;
-    animation-delay: 0s, 1s, 1.3s, 5s, 5s;
+    animation-delay: 0s, 1s, 1.3s, 4.5s, 4.5s;
 }
+/* this is activates each of the animations on the box when it is hovered over, there is a delay on each of the animations so that they play one after the other */
 .box-container
 {
     display: flex;
@@ -168,120 +184,128 @@ main {
     padding-bottom: 150px;
     width: 100%;
 }
-    
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* This centers the box, and gives it space from the elements around it  */
+
+.intro img {
+    border-radius: 30%;
 }
+/* This makes my profile photo rounded */
 .back-to-top {
     display: flex;
     justify-content: center;
     font-size: 2rem;
     padding-top: 50px;   
 }
+/* This the the styling for the back to top button */
 .back-to-top a {
     position: relative;
     bottom: 0px;
 }
+/* this is the position code for my back to top button */
 #index-back-to-top a {
     bottom: 30px;
 }
+/* the back to top button on my index page had to be different because my page is too short to have the normal styling  */
 .active {
     background-color: rgb(196, 60, 196);
 }
+/* this the styling for the for the nav bar tab that you are currently on */
 
 .language-icons {
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: row;
-    justify-content: flex-start;
-    /* height: 100px; */
+    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
-
+    width: 60%;
+    min-width: 300px;
 }
+/* this is to put my programming languages (on my portfolio page) where I want them  */
 .language-icons img {
     width: 100px;
-    /* padding-right: 50px; */
 }
+/* This is to set the height of the language icons */
 
 .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+/* This is to align the profile image and the text underneath it in the center of the page  */
 .intro img {
     width: 25%;
     min-width: 300px;
 }
+/* This is the size of the profile image  */
 .intro p {
     width: 50%;
     min-width: 300px;
     padding-bottom: 25px;
 }
+/* This is the set the size and and padding for my paragraph in my intro section */
 .social-media img {
     height: 150px;
 }
+/* This sets the height of my social media images on my contact page */
 
 #portfolio-image {
     width: 200px;
 }
+/* This is the css on the placeholder image i have on my portfolio page */
 #index-footer {
     position: fixed;
 }
+/* fixing the footer on my index page as the page is too short for the regular code  */
 .social-link { 
     display: flex;
     width: 50%;
     flex-direction: column;
     align-items: center;
-    
-
 }
+/* this is the css for the actual the icons on my contact page */
 .social-media {
     padding-top: 5%;
     display: flex;
     flex-wrap: wrap;
     height: 75%;
-    
 }
-
+/* This is the css for the container that holds my icons on my contact page  */
 
 @media only screen and (min-width: 600px) {
+    /* This the break point some of my styles  */
     nav {
         flex-direction: row;
-        /* width: 20%; */
     }
+    /* Once we get over 600 px the navigation menu changes to a horizontal menu */
     nav a {
-        height: 40px;
+        height: 50px;
     }
-    .grid-container {
-        display: grid;
+    /* This makes the nav bar items a bit taller and we get to phone size */
+    header h1 {
+        height: 2.5rem;
+        font-size: 2rem;
     }
+    /* this makes my header a bit bigger when we get to 850px */
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 850px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
     }
-    .grid-container img {
-        /* width: 400px; */
-    }
-    #profile-pic {
-        width: 60%;
-    }
-    main div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    main div p {
-        width: 60%
-    }
+    /* Once we get past 850px the grids will be split into two columns */
 
     nav a {
         height: 50px;
     }
+    /* this makes the nav bar taller when we get to the larger view */
 
-
+    .box-container {
+        align-items: center;
+    }
+    /* this is just centering my box */
+    header h1{
+        height: 3rem;
+        font-size: 2.5rem;
+    }
+    /* this makes my header a bit bigger when we get to 850px */
 }

@@ -247,9 +247,14 @@ main {
     height: 150px;
 }
 /* This sets the height of my social media images on my contact page */
+picture {
+    display:flex;
+    justify-content: center;
+}
 
 #portfolio-image {
-    width: 200px;
+    width: 50%;
+    max-width: 500px;
 }
 /* This is the css on the placeholder image i have on my portfolio page */
 #index-footer {

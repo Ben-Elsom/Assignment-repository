@@ -244,7 +244,7 @@ main {
 }
 /* This is the set the size and and padding for my paragraph in my intro section */
 .social-media img {
-    height: 150px;
+    height: 135px;
 }
 /* This sets the height of my social media images on my contact page */
 picture {
@@ -313,4 +313,12 @@ picture {
         font-size: 2.5rem;
     }
     /* this makes my header a bit bigger when we get to 850px */
+    #index-paragraphs {
+        display: flex;
+        justify-content: space-between;
+    }
+    #index-paragraphs p {
+        width: 45%;
+
+    }
 }
